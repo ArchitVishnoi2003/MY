@@ -3,6 +3,9 @@ node_modules/
 .pnp
 .pnp.js
 
+# Prefer npm for Vercel (avoid stale pnpm lockfile)
+pnpm-lock.yaml
+
 # Next.js
 .next/
 out/
