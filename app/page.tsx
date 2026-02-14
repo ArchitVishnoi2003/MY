@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { HeroSection } from '@/components/hero-section'
 import { RoyalDiary } from '@/components/royal-diary'
 import { SpecialMemories } from '@/components/special-memories'
@@ -10,6 +10,7 @@ import { ProposalScene } from '@/components/proposal-scene'
 import { ParticleSystem } from '@/components/particles'
 import { MicroInteractions } from '@/components/micro-interactions'
 import { CelebrationScene } from '@/components/celebration-scene'
+import { LoginGate } from '@/components/login-gate'
 
 export default function Page() {
   const diaryRef = useRef<HTMLDivElement>(null)
@@ -17,9 +18,31 @@ export default function Page() {
   const albumRef = useRef<HTMLDivElement>(null)
   const proposalRef = useRef<HTMLDivElement>(null)
   const celebrationRef = useRef<HTMLDivElement>(null)
+  const [unlocked, setUnlocked] = useState(false)
   const [diaryOpened, setDiaryOpened] = useState(false)
   const [proposalOpened, setProposalOpened] = useState(false)
   const [celebrationOpened, setCelebrationOpened] = useState(false)
+
+  // Restore unlocked state from localStorage so user isn't asked again after refresh
+  const STORAGE_KEY = 'treasure_unlocked_v2'
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      if (saved === 'true') setUnlocked(true)
+    } catch {
+      // ignore localStorage errors (private mode, etc.)
+    }
+  }, [])
+
+  const handleUnlock = () => {
+    try {
+      if (typeof window !== 'undefined') localStorage.setItem(STORAGE_KEY, 'true')
+    } catch {
+      // ignore
+    }
+    setUnlocked(true)
+  }
 
   const handleScrollIndicatorClick = () => {
     if (diaryRef.current) {
@@ -55,9 +78,11 @@ export default function Page() {
   }
 
   return (
-    <main className="relative w-full overflow-x-hidden bg-background">
-      {/* Particle system */}
-      <ParticleSystem />
+    <>
+      {!unlocked && <LoginGate onUnlock={handleUnlock} />}
+      <main className="relative w-full overflow-x-hidden bg-background">
+        {/* Particle system */}
+        <ParticleSystem />
       
       {/* Micro interactions */}
       <MicroInteractions />
@@ -121,6 +146,7 @@ export default function Page() {
           </button>
         </div>
       )}
-    </main>
+      </main>
+    </>
   )
 }
