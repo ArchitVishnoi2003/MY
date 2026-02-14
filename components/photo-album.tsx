@@ -51,7 +51,7 @@ export function PhotoAlbum() {
           className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary mb-2 sm:mb-3"
           style={{ fontFamily: '"Playfair Display", serif' }}
         >
-          Photo Album
+          Us🥺👉👈❤️
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-foreground opacity-70 px-2">
           Scroll or drag to move through our moments

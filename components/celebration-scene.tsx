@@ -48,20 +48,45 @@ export function CelebrationScene() {
 
         {/* Main message */}
         <div className="space-y-8 mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold text-white animate-fade-in"
+          <h1 className="text-4xl md:text-5xl font-bold text-white animate-fade-in"
               style={{ fontFamily: '"Playfair Display", serif' }}>
-            She Said YES!
+            Thank You For being my Lucky Charm Meri Sona!🥺❤️
           </h1>
 
-          <p className="text-2xl md:text-3xl text-accent font-dancing animate-fade-in"
+          <p className="text-1xl md:text-2xl text-accent font-dancing animate-fade-in"
              style={{ animationDelay: '0.3s' }}>
-            Our forever begins now...
+            For Being My Happiness, My Smile, My Home and My Everything Meri Sona🥺❤️
+
+          </p>
+
+          <p className="text-1xl md:text-2xl text-accent font-dancing animate-fade-in"
+             style={{ animationDelay: '0.3s' }}>
+            You came to me and made me the happiest person in the world🥺❤️
+
+          </p>
+
+          <p className="text-1xl md:text-2xl text-accent font-dancing animate-fade-in"
+             style={{ animationDelay: '0.3s' }}>
+            Thank you for fixing everything that Noone else could ever!❤️
+
+          </p>
+          <p className="text-1xl md:text-2xl text-accent font-dancing animate-fade-in"
+             style={{ animationDelay: '0.3s' }}>
+            If I am Happy = I'm with you!👉👈❤️
+
+          </p>
+          <p className="text-1xl md:text-2xl text-accent font-dancing animate-fade-in"
+             style={{ animationDelay: '0.3s' }}>
+              You're the Best Meri Pyaari Sona and You're Only and Only Mine!🥺❤️
+
           </p>
 
           <div className="space-y-4 mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <p className="text-lg text-white opacity-90">
-              From the moment I met you… my world turned Sona...
-              Aur tumse dur yeh jagg soona soonaa🥺👉👈
+              From the moment I met you, My world turned Sona...
+            </p>
+            <p className="text-lg text-white opacity-90">
+              Tumse dur yeh jagg soona soonaa🥺👉👈
             </p>
             <p className="text-lg text-white opacity-70">
               I LOVE YOU MY FOREVER VALENTINE MERI PYAARI SONA🥺❤️
@@ -90,10 +115,10 @@ export function CelebrationScene() {
         {/* Closing text */}
         <div className="space-y-6 border-t border-b border-purple-400 border-opacity-30 py-8 px-4">
           <p className="text-xl text-white font-dancing">
-            Thank you for saying yes to forever.
+            I MISS YOU MERI JAANU🥺👉👈❤️
           </p>
           <p className="text-sm text-white opacity-60">
-            This is just the beginning of our magical love story.
+            I LOVE YOU MERA PYAAR🥺❤️
           </p>
         </div>
       </div>

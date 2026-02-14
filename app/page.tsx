@@ -5,7 +5,7 @@ import { HeroSection } from '@/components/hero-section'
 import { RoyalDiary } from '@/components/royal-diary'
 import { SpecialMemories } from '@/components/special-memories'
 import { PhotoAlbum } from '@/components/photo-album'
-import { LoveScroll } from '@/components/love-scroll'
+import { LoveYouBoxes } from '@/components/love-you-boxes'
 import { ProposalScene } from '@/components/proposal-scene'
 import { ParticleSystem } from '@/components/particles'
 import { MicroInteractions } from '@/components/micro-interactions'
@@ -84,10 +84,10 @@ export default function Page() {
         </div>
       )}
 
-      {/* I LOVE YOU — scroll stack (scroll inside this section) */}
+      {/* I LOVE YOU — 3 boxes with images and captions */}
       {diaryOpened && (
         <div className="scroll-mt-0">
-          <LoveScroll />
+          <LoveYouBoxes />
         </div>
       )}
 

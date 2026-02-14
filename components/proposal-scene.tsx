@@ -22,6 +22,10 @@ export function ProposalScene({ onYes }: { onYes: () => void }) {
     onYes()
   }
 
+  const handleNo = () => {
+    alert('Badi Aayiii😤')
+  }
+
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
          style={{
@@ -81,9 +85,9 @@ export function ProposalScene({ onYes }: { onYes: () => void }) {
             From the moment I met you...
           </p>
           
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-2 sm:mb-4"
+          <h1 className="text-3xl sm:text-3xl md:text-5xl font-bold text-white mb-2 sm:mb-5"
               style={{ fontFamily: '"Playfair Display", serif', lineHeight: '1.2' }}>
-            My world turned Sona🤌🤪❤️.
+            My world turned Sona🤪💘
           </h1>
 
           <p className="text-lg sm:text-2xl md:text-3xl text-accent font-dancing">
@@ -91,24 +95,39 @@ export function ProposalScene({ onYes }: { onYes: () => void }) {
           </p>
         </div>
 
-        {/* Yes button */}
+        {/* Yes and No buttons */}
         <div className="flex flex-col gap-3 sm:gap-4 items-center justify-center mb-6 sm:mb-8">
-          <Button
-            onClick={handleYes}
-            size="lg"
-            className="px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 text-lg sm:text-xl md:text-2xl rounded-full font-bold gap-2 sm:gap-3 transform transition-all hover:scale-110 animate-pulse-glow"
-            style={{
-              background: 'linear-gradient(135deg, #B57EDC 0%, #CFA9FF 100%)',
-              color: 'white',
-              border: 'none',
-            }}
-          >
-            <Heart className="w-5 sm:w-6 h-5 sm:h-6 fill-current" />
-            YES!
-          </Button>
+          <div className="flex flex-wrap gap-3 sm:gap-4 items-center justify-center">
+            <Button
+              onClick={handleYes}
+              size="lg"
+              className="px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 text-lg sm:text-xl md:text-2xl rounded-full font-bold gap-2 sm:gap-3 transform transition-all hover:scale-110 animate-pulse-glow"
+              style={{
+                background: 'linear-gradient(135deg, #B57EDC 0%, #CFA9FF 100%)',
+                color: 'white',
+                border: 'none',
+              }}
+            >
+              <Heart className="w-5 sm:w-6 h-5 sm:h-6 fill-current" />
+              YES!
+            </Button>
+            <Button
+              onClick={handleNo}
+              size="lg"
+              className="px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 text-lg sm:text-xl md:text-2xl rounded-full font-bold gap-2 sm:gap-3 transform transition-all hover:scale-110"
+              style={{
+                background: 'linear-gradient(135deg, #8B0000 0%, #C41E3A 50%, #DC143C 100%)',
+                color: 'white',
+                border: 'none',
+                boxShadow: '0 0 20px rgba(220, 20, 60, 0.5)',
+              }}
+            >
+              No🤨
+            </Button>
+          </div>
 
           <p className="text-xs sm:text-sm text-white opacity-60 mt-2 sm:mt-4">
-            This is just the beginning of our forever story...
+            Meri Aee ji Oo ji Kardo naah Haanjiiii🥺👉👈❤️
           </p>
         </div>
       </div>

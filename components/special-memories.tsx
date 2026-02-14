@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 const memories = [
   {
     id: 1,
-    caption: 'From Outfit Recommendation',
+    caption: 'From Chosing Outfit😗💞',
     subCaption: null,
     color: 'from-purple-400 to-pink-300',
     image: '/images/1000054018.jpeg',
@@ -13,7 +13,7 @@ const memories = [
   },
   {
     id: 2,
-    caption: 'Our First Meet',
+    caption: 'To our First Meet🥺💞',
     subCaption: null,
     color: 'from-indigo-400 to-purple-300',
     image: '/images/1000054016.jpg.jpeg',
@@ -21,7 +21,7 @@ const memories = [
   },
   {
     id: 3,
-    caption: 'Us after Silly fights',
+    caption: 'Us after Silly fights🤪❤️',
     subCaption: null,
     color: 'from-red-300 to-pink-300',
     image: '/images/1000053996.jpeg',
@@ -30,7 +30,7 @@ const memories = [
   },
   {
     id: 4,
-    caption: 'My permanent booking',
+    caption: 'My permanent booking😗❤️',
     subCaption: null,
     color: 'from-blue-400 to-indigo-300',
     image: '/images/20260213_203329.jpeg',
@@ -38,7 +38,7 @@ const memories = [
   },
   {
     id: 5,
-    caption: 'My Favourite Day',
+    caption: 'My Favourite Day🤭❤️',
     subCaption: null,
     color: 'from-amber-400 to-orange-300',
     image: '/images/1000054011.jpeg',
@@ -46,7 +46,7 @@ const memories = [
   },
   {
     id: 6,
-    caption: 'The smile I live for',
+    caption: 'The smile I live for🥺❤️',
     subCaption: null,
     color: 'from-yellow-400 to-amber-300',
     image: '/images/1000054004.jpeg',
@@ -54,7 +54,15 @@ const memories = [
   },
   {
     id: 7,
-    caption: 'Us forever',
+    caption: 'Ayyee Hayyeee So Sundar Meri Joru Ji🙈🤪💞',
+    subCaption: null,
+    color: 'from-yellow-400 to-amber-300',
+    image: '/images/1000054010.jpg.jpeg',
+    emoji: '😗'
+  },
+  {
+    id: 8,
+    caption: 'Us forever❤️',
     subCaption: null,
     color: 'from-rose-400 to-pink-300',
     image: '/images/1000054013.jpg.jpeg',

@@ -44,20 +44,20 @@ export function HeroSection({ onScrollIndicatorClick }: { onScrollIndicatorClick
         {/* Main heading */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 animate-fade-in drop-shadow-lg text-balance"
             style={{ fontFamily: '"Playfair Display", serif', lineHeight: '1.2' }}>
-          A Kingdom Built For You
+          Happy Valentine's Day Meri Joru Ji🫣🤪❤️
           <span className="block text-3xl sm:text-4xl md:text-6xl mt-2 sm:mt-4">❤️</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg md:text-2xl text-white mb-8 sm:mb-12 animate-fade-in drop-shadow-md font-dancing"
            style={{ animationDelay: '0.2s' }}>
-          Every love story deserves to feel like royalty
+          I LOVE YOU SO SO SO.... MUCH MERI SONA JI🥺❤️
         </p>
 
         {/* CTA Text */}
         <p className="text-sm sm:text-base md:text-lg text-white opacity-90 mb-8 sm:mb-16 animate-fade-in"
            style={{ animationDelay: '0.4s' }}>
-          Scroll to begin our story
+          
         </p>
 
         {/* Scroll indicator */}
