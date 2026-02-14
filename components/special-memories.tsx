@@ -57,8 +57,9 @@ const memories = [
     caption: 'Ayyee Hayyeee So Sundar Meri Joru Ji🙈🤪💞',
     subCaption: null,
     color: 'from-yellow-400 to-amber-300',
-    image: '/images/1000054010.jpg.jpeg',
-    emoji: '😗'
+    image: '/images/10000540101112.JPG',
+    emoji: '😗',
+    objectPosition: 'top center' as const
   },
   {
     id: 8,
@@ -113,6 +114,7 @@ export function SpecialMemories() {
                   src={memory.image}
                   alt={memory.caption}
                   className={`w-full h-full ${(memory as { objectFit?: string }).objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                  style={(memory as { objectPosition?: string }).objectPosition ? { objectPosition: (memory as { objectPosition: string }).objectPosition } : undefined}
                   sizes="(max-width: 640px) 92vw, (max-width: 1024px) 48vw, 33vw"
                   loading="lazy"
                   decoding="async"

@@ -17,19 +17,18 @@ const CircularGallery = dynamic(() => import('@/components/CircularGallery'), {
 
 // Your photos — place files in public/images/images_album/ with these names
 const ALBUM_ITEMS = [
-  { image: '/images/images_album/1000053999.jpg.jpeg', text: 'Our moments' },
-  { image: '/images/images_album/1000054000.jpg.jpeg', text: 'Together' },
-  { image: '/images/images_album/1000054001.jpg.jpeg', text: 'Us' },
-  { image: '/images/images_album/1000054002.jpg.jpeg', text: 'Forever' },
-  { image: '/images/images_album/1000054003.jpg.jpeg', text: 'Love' },
-  { image: '/images/images_album/1000054005.jpg.jpeg', text: 'Happy' },
-  { image: '/images/images_album/1000054006.jpg.jpeg', text: 'Memories' },
-  { image: '/images/images_album/1000054007.jpg.jpeg', text: 'Smiles' },
-  { image: '/images/images_album/1000054008.jpg.jpeg', text: 'Calls' },
-  { image: '/images/images_album/1000054009.jpg.jpeg', text: 'Best day' },
   { image: '/images/images_album/1000054012.webp', text: 'Us' },
+  { image: '/images/images_album/1000054006.jpg.jpeg', text: 'Memories' },
+  { image: '/images/images_album/1000054000.jpg.jpeg', text: 'Together' },
+  { image: '/images/images_album/1000054015.jpg.jpeg', text: 'Yours' },
+  { image: '/images/images_album/1000053999.jpg.jpeg', text: 'Our moments' },
+  { image: '/images/images_album/1000054007.jpg.jpeg', text: 'Smiles' },
+  { image: '/images/images_album/1000054003.jpg.jpeg', text: 'Love' },
+  { image: '/images/images_album/1000054009.jpg.jpeg', text: 'Best day' },
+  { image: '/images/images_album/1000054001.jpg.jpeg', text: 'Us' },
   { image: '/images/images_album/1000054014.jpg.jpeg', text: 'Always' },
-  { image: '/images/images_album/1000054015.jpg.jpeg', text: 'Yours' }
+  { image: '/images/images_album/1000054008.jpg.jpeg', text: 'Calls' },
+  { image: '/images/images_album/1000054005.jpg.jpeg', text: 'Happy' }
 ]
 
 export function PhotoAlbum() {
