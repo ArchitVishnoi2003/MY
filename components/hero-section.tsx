@@ -1,26 +1,8 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { ChevronDown } from 'lucide-react'
-
-export function HeroSection({ onScrollIndicatorClick }: { onScrollIndicatorClick: () => void }) {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const animate = () => {
-      const indicator = containerRef.current?.querySelector('[data-scroll-indicator]')
-      if (indicator) {
-        const opacity = Math.sin(Date.now() / 500) * 0.3 + 0.7
-        ;(indicator as HTMLElement).style.opacity = String(opacity)
-      }
-      requestAnimationFrame(animate)
-    }
-    animate()
-  }, [])
-
+export function HeroSection() {
   return (
     <div
-      ref={containerRef}
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #B57EDC 0%, #DCC6FF 50%, #F6C1CC 100%)',
@@ -59,17 +41,6 @@ export function HeroSection({ onScrollIndicatorClick }: { onScrollIndicatorClick
            style={{ animationDelay: '0.4s' }}>
           
         </p>
-
-        {/* Scroll indicator */}
-        <div
-          data-scroll-indicator
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer transition-transform hover:scale-110"
-          onClick={onScrollIndicatorClick}
-        >
-          <div className="bg-white bg-opacity-30 rounded-full p-3 hover:bg-opacity-50 transition-all backdrop-blur-sm">
-            <ChevronDown className="w-6 h-6 text-white animate-bounce" />
-          </div>
-        </div>
       </div>
 
       {/* Light rays effect */}

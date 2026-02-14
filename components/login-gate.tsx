@@ -8,6 +8,27 @@ const CODE = '272496'
 const PASSWORD = 'architkisonaji'
 const DIGITS = 6
 
+// Seeded RNG so server and client render the same star positions (avoids hydration mismatch)
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6d2b79f5)
+    t = Math.imul(t ^ (t >>> 15), t | 1)
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61)
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+const STAR_SEED = 0x5eed
+const starRng = mulberry32(STAR_SEED)
+const STAR_STYLES = Array.from({ length: 40 }, () => ({
+  width: starRng() * 2 + 1 + 'px',
+  height: starRng() * 2 + 1 + 'px',
+  left: starRng() * 100 + '%',
+  top: starRng() * 100 + '%',
+  opacity: starRng() * 0.5 + 0.3,
+  animationDelay: starRng() * 2 + 's',
+}))
+
 function NumberWheel({
   value,
   onChange,
@@ -174,19 +195,12 @@ export function LoginGate({ onUnlock }: { onUnlock: () => void }) {
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-30 bg-[#F6C1CC]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl opacity-20 bg-[#B57EDC]" />
 
-          {/* Stars */}
-          {Array.from({ length: 40 }).map((_, i) => (
+          {/* Stars - precomputed with seeded RNG so server and client match (no hydration error) */}
+          {STAR_STYLES.map((starStyle, i) => (
             <div
               key={i}
               className="absolute rounded-full bg-white animate-pulse"
-              style={{
-                width: Math.random() * 2 + 1 + 'px',
-                height: Math.random() * 2 + 1 + 'px',
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-                opacity: Math.random() * 0.5 + 0.3,
-                animationDelay: Math.random() * 2 + 's',
-              }}
+              style={starStyle}
             />
           ))}
 

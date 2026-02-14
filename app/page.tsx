@@ -44,12 +44,6 @@ export default function Page() {
     setUnlocked(true)
   }
 
-  const handleScrollIndicatorClick = () => {
-    if (diaryRef.current) {
-      diaryRef.current.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   const handleDiaryOpen = () => {
     setDiaryOpened(true)
     setTimeout(() => {
@@ -88,7 +82,7 @@ export default function Page() {
       <MicroInteractions />
 
       {/* Hero section */}
-      <HeroSection onScrollIndicatorClick={handleScrollIndicatorClick} />
+      <HeroSection />
 
       {/* Diary section */}
       <div ref={diaryRef}>
